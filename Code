@@ -1,0 +1,40 @@
+Data = {
+    "Raphael" : [312110173, 90, 90, 90]
+}
+Data['Loop'] = [312110174, 70, 20, 50]
+x = 0
+while x == 0:
+    pick = input("(T)ambah/ubah, (H)apus, (L)ihat, (C)ari, (K)eluar")
+
+    if pick == 'T' or pick == 't':
+        Data[input("Masukkan Nama anda : ")] = [
+            input("Masukkan NIM Anda : "),
+            int(input("Masukkan Nilai Tugas Anda : ")),
+            int(input("Masukkan Nilai UTS Anda : ")),
+            int(input("Masukkan Nilai UAS Anda : "))
+        ]
+    if pick == 'H' or pick == 'h':
+        for ha in range(len(Data)):
+            print(ha + 1 ,list(Data.keys())[ha])
+        del Data[input("Ketik Nama diatas yang ingin dihapus")]
+
+    elif pick == 'L' or pick == 'l':
+        print("===========================================")
+        print("No |    NIM    |  Nama  | Tugas | UTS | UAS | AKHIR")
+        for la in range(len(Data)):
+            print(la, ' |',Data[list(Data.keys())[la]][0], '|',list(Data.keys())[la], '|',
+                  Data[list(Data.keys())[la]][1], '|' ,
+                  Data[list(Data.keys())[la]][2], '|' ,
+                  Data[list(Data.keys())[la]][3], '|',
+                  Data[list(Data.keys())[la]][1] * 0.3 + Data[list(Data.keys())[la]][2] * 0.35 +
+                  Data[list(Data.keys())[la]][3] * 0.35)
+        print("===========================================")
+    elif pick == 'C' or pick == 'c':
+        Find = input("Ketik NIM atau Nama : ")
+        for haha in range(len(Data)):
+            if Find == list(Data.keys())[haha] or Find == Data[list(Data.keys())[haha]][0]:
+                print(list(Data.keys())[haha], Data[list(Data.keys())[haha]][0],
+                      Data[list(Data.keys())[haha]][1], Data[list(Data.keys())[haha]][2],
+                      Data[list(Data.keys())[haha]][3])
+    elif pick == 'K' or pick == 'k':
+        break
