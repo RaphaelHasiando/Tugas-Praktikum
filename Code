@@ -1,10 +1,9 @@
 Data = {
-    "Raphael" : [312110173, 90, 90, 90]
+    "Raphael" : ['312110173' , 90, 90, 90],
+    "Michael" : ['312110174' , 100, 90, 80]
 }
-Data['Loop'] = [312110174, 70, 20, 50]
-x = 0
-while x == 0:
-    pick = input("(T)ambah/ubah, (H)apus, (L)ihat, (C)ari, (K)eluar")
+while True:
+    pick = input("(T)ambah/ubah, (H)apus, (L)ihat, (C)ari, (K)eluar : ")
 
     if pick == 'T' or pick == 't':
         Data[input("Masukkan Nama anda : ")] = [
@@ -16,13 +15,13 @@ while x == 0:
     if pick == 'H' or pick == 'h':
         for ha in range(len(Data)):
             print(ha + 1 ,list(Data.keys())[ha])
-        del Data[input("Ketik Nama diatas yang ingin dihapus")]
+        del Data[input("Ketik Nama diatas yang ingin dihapus : ")]
 
     elif pick == 'L' or pick == 'l':
         print("===========================================")
         print("No |    NIM    |  Nama  | Tugas | UTS | UAS | AKHIR")
         for la in range(len(Data)):
-            print(la, ' |',Data[list(Data.keys())[la]][0], '|',list(Data.keys())[la], '|',
+            print(la + 1, ' |',Data[list(Data.keys())[la]][0], '|',list(Data.keys())[la], '|',
                   Data[list(Data.keys())[la]][1], '|' ,
                   Data[list(Data.keys())[la]][2], '|' ,
                   Data[list(Data.keys())[la]][3], '|',
@@ -30,11 +29,14 @@ while x == 0:
                   Data[list(Data.keys())[la]][3] * 0.35)
         print("===========================================")
     elif pick == 'C' or pick == 'c':
-        Find = input("Ketik NIM atau Nama : ")
-        for haha in range(len(Data)):
-            if Find == list(Data.keys())[haha] or Find == Data[list(Data.keys())[haha]][0]:
-                print(list(Data.keys())[haha], Data[list(Data.keys())[haha]][0],
-                      Data[list(Data.keys())[haha]][1], Data[list(Data.keys())[haha]][2],
-                      Data[list(Data.keys())[haha]][3])
+        Find = input("Ketik Nama yang ingin Anda cari : ")
+        if Find in list(Data.keys()):
+            print('===',Find,'===')
+            print('NIM : ',Data[Find][0])
+            print('TUGAS : ',Data[Find][1])
+            print('UTS : ', Data[Find][2])
+            print('UAS : ', Data[Find][3])
+        else:
+            print("ID Tidak Ditemukan")
     elif pick == 'K' or pick == 'k':
         break
