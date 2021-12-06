@@ -67,3 +67,9 @@ Pada saat nilai/value variable itu 'K'
     elif pick == 'K' or pick == 'k':
         break
 Tahap ini akan menutup while loop
+![image](https://user-images.githubusercontent.com/61907877/144780789-0cc73620-03bd-48f3-a7ab-2fafb9f9caf8.png)
+![image](https://user-images.githubusercontent.com/61907877/144780880-3c514b51-03ce-452a-9864-e1a3fc27d181.png)
+![image](https://user-images.githubusercontent.com/61907877/144780940-679f7fb9-c5cb-49f1-a152-6c8d24761678.png)
+
+![Flowchart (1)](https://user-images.githubusercontent.com/61907877/144780991-5058be74-f162-4e31-8365-f6b53c1ab586.png)
+
